@@ -8,6 +8,7 @@ module.exports = {
     web_record_timeout: 30, //下载网络语音的超时时间(秒)
     web_record_maxsize: 0,  //下载网络语音的最大尺寸(KB)
     cache_root: path.join(__dirname, "data"), //数据文件存放路径(需要有可写权限)，默认是主目录下的data文件夹
+    debug: false,
 
     //单个账号的配置(可以添加多个)
     123456789: {
