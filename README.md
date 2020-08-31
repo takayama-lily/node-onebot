@@ -2,7 +2,7 @@
 
 [![node engine](https://img.shields.io/node/v/oicq.svg)](https://nodejs.org)
 
-## [Onebot](https://cqhttp.cc) 的实现
+## [Onebot](https://cqhttp.cc) 的实现 ([内核](https://github.com/takayama-lily/oicq))
 
 **使用方法：**
 
