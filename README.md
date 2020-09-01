@@ -17,4 +17,4 @@
 
 ## 文档
 
-[开发进度](https://github.com/takayama-lily/oicq/blob/master/docs/project.md)
+[开发进度](https://github.com/takayama-lily/oicq/blob/dev/docs/project.md)
