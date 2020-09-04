@@ -58,7 +58,7 @@
 * [x] _async异步调用
 * [x] 字符串或数组消息段
 * [x] 鉴权
-* [ ] WS心跳
+* [x] WS心跳
 * [ ] 事件上报过滤
 
 [内核功能支持和CQ码](https://github.com/takayama-lily/oicq/blob/dev/docs/project.md)
