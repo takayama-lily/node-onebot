@@ -1,8 +1,8 @@
 {
-  "name": "onebot",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "name": "node-onebot",
+  "version": "1.0.0",
+  "description": "onebot",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,13 +11,13 @@
     "url": "git+https://github.com/takayama-lily/onebot.git"
   },
   "author": "takayama",
-  "license": "ISC",
+  "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/takayama-lily/onebot/issues"
   },
   "homepage": "https://github.com/takayama-lily/onebot#readme",
   "dependencies": {
-    "oicq": "^1.0.2",
+    "oicq": "^1.1.2",
     "ws": "^7.3.1"
   }
 }
