@@ -38,6 +38,9 @@
 |delete_msg             |message_id是字符串格式|
 |set_friend_add_request ||
 |set_group_add_request  ||
+|send_group_notice      |title参数无效，仅content有效|
+|set_group_special_title||
+|set_group_admin        ||
 |set_group_card         ||
 |set_group_kick         ||
 |set_group_ban          ||
