@@ -1,4 +1,4 @@
-# [Onebot](https://cqhttp.cc) (node版)
+# http-api (文档参考[onebot](https://cqhttp.cc)）
 
 [![core](https://img.shields.io/badge/core-oicq-brightgreen)](https://github.com/takayama-lily/oicq)
 [![node engine](https://img.shields.io/node/v/oicq.svg)](https://nodejs.org)
@@ -22,9 +22,11 @@
 * [x] POST上报(多点)
 * [x] 反向WS连接(多点)
 
+## API
+
 <details>
 
-<summary>API</summary>
+<summary>点开</summary>
 
 |名称|备注|
 |-|-|
