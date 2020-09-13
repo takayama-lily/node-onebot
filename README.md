@@ -41,6 +41,7 @@
 |set_friend_add_request ||
 |set_group_add_request  ||
 |send_group_notice      |title参数无效，仅content有效|
+|send_group_poke        |戳一戳，传group_id和user_id|
 |set_group_special_title||
 |set_group_admin        ||
 |set_group_card         ||
