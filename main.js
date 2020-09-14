@@ -3,9 +3,11 @@ const path = require("path");
 const fs = require("fs");
 require("oicq");
 const logger = process.OICQ.logger;
-const root_dir = path.join(__dirname, "data");
+const data_dir = path.join(process.mainModule.path, "data");
 try {
-    const testfile = path.join(root_dir, "test");
+    if (!fs.existsSync(data_dir))
+        fs.mkdirSync(data_dir, {mode: 0o755});
+    const testfile = path.join(data_dir, "test");
     fs.writeFileSync(testfile, "");
     fs.unlinkSync(testfile);
 } catch(e) {
