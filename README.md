@@ -41,7 +41,7 @@
 |set_friend_add_request ||
 |set_group_add_request  ||
 |send_group_notice      |title参数无效，仅content有效|
-|send_group_poke        |戳一戳，传group_id和user_id|
+|send_group_poke        |群戳一戳，参数 group_id, user_id (未来可能会用CQ码实现)|
 |set_group_special_title||
 |set_group_admin        ||
 |set_group_card         ||
@@ -55,7 +55,10 @@
 |get_status             ||
 |get_version_info       |暂时返回的是内核版本|
 |.handle_quick_operation|仅WS有效|
-|change_online_status   |新增API，参数status (11我在线上 31离开 41隐身 50忙碌 60Q我吧 70请勿打扰)|
+|change_online_status   |改状态，参数 status (11我在线上 31离开 41隐身 50忙碌 60Q我吧 70请勿打扰)|
+|add_friend             |添加群员为好友，参数 group_id, user_id, comment(可省略)|
+|delete_friend          |删除好友，参数 user_id, block(是否屏蔽,默认为true)|
+|invite_friend          |邀请好友入群，参数 group_id, user_id|
 
 </details>
 
