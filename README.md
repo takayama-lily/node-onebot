@@ -49,6 +49,7 @@
 |set_group_ban          ||
 |set_group_leave        ||
 |set_group_name         ||
+|send_like              |风险接口，勿频繁调用|
 |get_login_info         ||
 |can_send_image         ||
 |can_send_record        ||
