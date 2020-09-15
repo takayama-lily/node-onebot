@@ -56,10 +56,15 @@
 |get_status             ||
 |get_version_info       |暂时返回的是内核版本|
 |.handle_quick_operation|仅WS有效|
-|change_online_status   |改状态，参数 status (11我在线上 31离开 41隐身 50忙碌 60Q我吧 70请勿打扰)|
+|set_online_status      |改状态，参数 status (11我在线上 31离开 41隐身 50忙碌 60Q我吧 70请勿打扰)|
 |add_friend             |添加群员为好友，参数 group_id, user_id, comment(可省略)|
 |delete_friend          |删除好友，参数 user_id, block(是否屏蔽,默认为true)|
 |invite_friend          |邀请好友入群，参数 group_id, user_id|
+|set_nickname           |设置昵称，参数 nickname|
+|set_gender             |设置性别，参数 gender (0未知 1男 2女)|
+|set_birthday           |设置生日，参数 birthday (格式：20110202)|
+|set_description        |设置个人说明，参数 description|
+|set_signature          |设置签名，参数 signature|
 
 </details>
 
