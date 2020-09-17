@@ -35,6 +35,7 @@
 |get_group_info         ||
 |get_group_member_list  ||
 |get_group_member_info  ||
+|get_stranger_info      ||
 |send_private_msg       |得到的message_id是字符串格式|
 |send_group_msg         |得到的message_id是字符串格式|
 |delete_msg             |message_id是字符串格式|
