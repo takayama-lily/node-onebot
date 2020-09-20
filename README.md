@@ -31,6 +31,7 @@
 |名称|备注|
 |-|-|
 |get_friend_list        ||
+|get_stranger_list      ||
 |get_group_list         ||
 |get_group_info         ||
 |get_group_member_list  ||
@@ -58,6 +59,7 @@
 |get_version_info       |暂时返回的是内核版本|
 |.handle_quick_operation|仅WS有效|
 |set_online_status      |改状态，参数 status (11我在线上 31离开 41隐身 50忙碌 60Q我吧 70请勿打扰)|
+|add_group              |添加群，参数 group_id (注：加群和加好友是风险接口，每日添加超过一定数量账号必然被风控)|
 |add_friend             |添加群员为好友，参数 group_id, user_id, comment(可省略)|
 |delete_friend          |删除好友，参数 user_id, block(是否屏蔽,默认为true)|
 |invite_friend          |邀请好友入群，参数 group_id, user_id|
