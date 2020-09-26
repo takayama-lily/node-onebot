@@ -1,4 +1,9 @@
 "use strict";
+const ver = process.version.substr(1).split(".");
+if (ver[0] < 12 || (ver[0] == 12 && ver[1] < 16)) {
+    console.log("你的nodejs版本过低，需要更新至v12.16以上");
+    process.exit();
+}
 const path = require("path");
 const fs = require("fs");
 require("oicq");

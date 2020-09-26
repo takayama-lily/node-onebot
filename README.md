@@ -1,4 +1,4 @@
-# http-api (文档参考[onebot](https://cqhttp.cc)）
+# http-api
 
 [![core](https://img.shields.io/badge/core-oicq-brightgreen)](https://github.com/takayama-lily/oicq)
 [![node engine](https://img.shields.io/node/v/oicq.svg)](https://nodejs.org)
@@ -22,14 +22,16 @@
 * [x] POST上报(多点)
 * [x] 反向WS连接(多点)
 
-## API
+----
+
+## API ([文档](https://github.com/howmanybots/onebot/blob/master/v11/specs/api/public.md)）
 
 <details>
 
 <summary>点开</summary>
 
-|名称|备注|
-|-|-|
+|名称|参数(文档里有的不列了)|备注|
+|-|-|-|
 |get_friend_list        ||
 |get_stranger_list      ||
 |get_group_list         ||
@@ -37,14 +39,14 @@
 |get_group_member_list  ||
 |get_group_member_info  ||
 |get_stranger_info      ||
-|send_private_msg       |得到的message_id是字符串格式|
-|send_group_msg         |得到的message_id是字符串格式|
-|send_discuss_msg       |发讨论组消息，无message_id|
-|delete_msg             |message_id是字符串格式|
+|send_private_msg       ||返回的message_id是字符串格式
+|send_group_msg         ||返回的message_id是字符串格式
+|send_discuss_msg       |discuss_id<br>message<br>auto_escape|发讨论组消息，没有message_id
+|delete_msg             ||
 |set_friend_add_request ||
 |set_group_add_request  ||
-|send_group_notice      |title参数无效，仅content有效|
-|send_group_poke        |群戳一戳，参数 group_id, user_id (未来可能会用CQ码实现)|
+|send_group_notice      ||
+|send_group_poke        ||群戳一戳，未来可能会用CQ码实现
 |set_group_special_title||
 |set_group_admin        ||
 |set_group_card         ||
@@ -52,25 +54,71 @@
 |set_group_ban          ||
 |set_group_leave        ||
 |set_group_name         ||
-|send_like              |风险接口，勿频繁调用|
+|send_like              ||点赞是风险接口，不要频繁调用
 |get_login_info         ||
 |can_send_image         ||
 |can_send_record        ||
 |get_status             ||
-|get_version_info       |暂时返回的是内核版本|
-|.handle_quick_operation|仅WS有效|
-|set_online_status      |改状态，参数 status (11我在线上 31离开 41隐身 50忙碌 60Q我吧 70请勿打扰)|
-|add_group              |添加群，参数 group_id (注：加群和加好友是风险接口，每日添加超过一定数量账号必然被风控)|
-|add_friend             |添加群员为好友，参数 group_id, user_id, comment(可省略)|
-|delete_friend          |删除好友，参数 user_id, block(是否屏蔽,默认为true)|
-|invite_friend          |邀请好友入群，参数 group_id, user_id|
-|set_nickname           |设置昵称，参数 nickname|
-|set_gender             |设置性别，参数 gender (0未知 1男 2女)|
-|set_birthday           |设置生日，参数 birthday (格式：20110202)|
-|set_description        |设置个人说明，参数 description|
-|set_signature          |设置签名，参数 signature|
+|get_version_info       ||暂时返回的是内核版本
+|.handle_quick_operation||仅WS有效
+|set_online_status      |status|11我在线上 31离开 41隐身 50忙碌 60Q我吧 70请勿打扰
+|add_group              |group_id|加群和加好友是风险接口，每日添加超过一定数量账号会被风控
+|add_friend             |group_id<br>user_id<br>comment|添加好友<br>暂时只能添加群员
+|delete_friend          |user_id<br>block|删除好友<br>block默认为true
+|invite_friend          |group_id<br>user_id|邀请好友入群
+|set_nickname           |nickname|设置昵称
+|set_gender             |gender|设置性别 0未知 1男 2女
+|set_birthday           |birthday|设置生日 格式：20110202
+|set_description        |description|设置个人说明
+|set_signature          |signature|设置签名
 
 </details>
+
+----
+
+## Events
+
+<details>
+
+<summary>点开</summary>
+
+目前和onebot标准事件不完全相同，下个版本会实现兼容
+
+||新版事件([文档](https://github.com/takayama-lily/oicq/blob/master/docs/event.md))|onebot标准事件([文档](https://github.com/howmanybots/onebot/blob/master/v11/specs/event/README.md))|
+|-|-|-|
+|好友请求|request.friend.add     |request.friend         |
+|加群请求|request.group.add      |request.group.add      |
+|加群邀请|request.group.invite   |request.group.invite   |
+|好友消息|message.private.friend |message.private.friend |
+|单向好友|message.private.single |                       |
+|临时会话|message.private.group  |message.private.group  |
+|临时会话|message.private.other  |message.private.other  |
+|群聊消息|message.group.normal   |message.group.normal   |
+|匿名消息|message.group.anonymous|message.group.anonymous|
+|讨论组消|message.discuss        |                       |
+|好友增加|notice.friend.increase |notice.friend_add      |
+|好友减少|notice.friend.decrease |                       |
+|好友撤回|notice.friend.recall   |notice.friend_recall   |
+|资料变更|notice.friend.profile  |                       |
+|群员增加|notice.group.increase  |notice.group_increase  |
+|群员减少|notice.group.decrease  |notice.group_decrease  |
+|群组撤回|notice.group.recall    |notice.group_recall    |
+|管理变更|notice.group.admin     |notice.group_admin     |
+|群组禁言|notice.group.ban       |notice.group_ban       |
+|群组转让|notice.group.transfer  |                       |
+|群组公告|notice.group.notice    |                       |
+|群组文件|notice.group.file      |notice.group_upload    |
+|头衔变更|notice.group.title     |                       |
+|群戳一戳|notice.group.poke      |                       |
+|设置变更|notice.group.setting   |                       |
+|元事件|meta_event.lifecycle.enable|meta_event.lifecycle.enable|
+|元事件|meta_event.lifecycle.disable|meta_event.lifecycle.disable|
+|元事件||meta_event.lifecycle.connect|
+|元事件|meta_event.heartbeat|meta_event.heartbeat|
+
+</details>
+
+----
 
 ## 其他
 
