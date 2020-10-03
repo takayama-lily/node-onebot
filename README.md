@@ -106,8 +106,7 @@
 |管理变更|notice.group.admin     |notice.group_admin     |
 |群组禁言|notice.group.ban       |notice.group_ban       |
 |群组转让|notice.group.transfer  |                       |
-|群组公告|notice.group.notice    |                       |
-|群组文件|notice.group.file      |notice.group_upload    |
+|群组文件|                       |notice.group_upload    |
 |头衔变更|notice.group.title     |                       |
 |群戳一戳|notice.group.poke      |                       |
 |设置变更|notice.group.setting   |                       |
