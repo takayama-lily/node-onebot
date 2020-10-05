@@ -82,9 +82,10 @@
 
 <summary>点开</summary>
 
-目前和onebot标准事件不完全相同，下个版本会实现兼容
+新版事件的notice部分与cqhttp事件不同。  
+默认使用新版事件，如需使用cqhttp事件，在config.js中加上 `use_cqhttp_notice: true` 的配置即可。
 
-||新版事件([文档](https://github.com/takayama-lily/oicq/blob/master/docs/event.md))|onebot标准事件([文档](https://github.com/howmanybots/onebot/blob/master/v11/specs/event/README.md))|
+||新版事件([文档](https://github.com/takayama-lily/oicq/blob/master/docs/event.md))|cqhttp事件([文档](https://github.com/howmanybots/onebot/blob/master/v11/specs/event/README.md))|
 |-|-|-|
 |好友请求|request.friend.add     |request.friend         |
 |加群请求|request.group.add      |request.group.add      |
@@ -109,10 +110,10 @@
 |群组文件|                       |notice.group_upload    |
 |头衔变更|notice.group.title     |                       |
 |群戳一戳|notice.group.poke      |                       |
-|设置变更|notice.group.setting   |                       |
+|群设置变|notice.group.setting   |                       |
 |元事件|meta_event.lifecycle.enable|meta_event.lifecycle.enable|
 |元事件|meta_event.lifecycle.disable|meta_event.lifecycle.disable|
-|元事件||meta_event.lifecycle.connect|
+|元事件|meta_event.lifecycle.connect|meta_event.lifecycle.connect|
 |元事件|meta_event.heartbeat|meta_event.heartbeat|
 
 </details>
