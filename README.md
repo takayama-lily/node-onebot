@@ -127,5 +127,6 @@
 * [x] 鉴权
 * [x] WS心跳
 * [ ] 事件上报过滤
+* [ ] _limit限速调用api
 
 [内核功能支持和CQ码](https://github.com/takayama-lily/oicq/blob/dev/docs/project.md)
