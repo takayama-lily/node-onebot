@@ -6,7 +6,7 @@
 **使用方法：**
 
 1. 下载安装 [nodejs](https://nodejs.org)
-2. 下载此源码包
+2. 下载此源码包(建议用`git clone`)
 3. 在目录下执行 `npm up` 安装依赖(今后也可使用此命令一键更新内核)
 4. 配置 `config.js` (参考里面的注释)
 5. 运行 `node main 123456789` (数字是你的登陆账号)
@@ -122,11 +122,11 @@
 
 ## 其他
 
-* [x] _async异步调用
+* [x] _async异步调用api
 * [x] 字符串或数组消息段
 * [x] 鉴权
 * [x] WS心跳
 * [ ] 事件上报过滤
-* [ ] _limit限速调用api
+* [ ] _rate_limited限速调用api
 
 [内核功能支持和CQ码](https://github.com/takayama-lily/oicq/blob/dev/docs/project.md)
