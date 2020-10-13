@@ -6,6 +6,14 @@ if (ver[0] < 12 || (ver[0] == 12 && ver[1] < 16)) {
 }
 const path = require("path");
 const fs = require("fs");
+
+try {
+    console.log(`正在检查&更新内核版本..`);
+    require("child_process").execSync("npm up", {stdio: "ignore"});
+} catch (e) {
+    console.log(`"npm up"执行失败，你可能需要手动执行。`);
+}
+
 require("oicq");
 const logger = process.OICQ.logger;
 const data_dir = path.join(process.mainModule.path, "data");

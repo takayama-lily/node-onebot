@@ -5,14 +5,14 @@
 
 **使用方法：**
 
-1. 下载安装 [nodejs](https://nodejs.org)
-2. 下载此源码包(建议用`git clone`)
-3. 在目录下执行 `npm up` 安装依赖(今后也可使用此命令一键更新内核)
-4. 配置 `config.js` (参考里面的注释)
-5. 运行 `node main 123456789` (数字是你的登陆账号)
+1. 下载安装 [nodejs](https://nodejs.org) (v12.16以上)
+2. 下载此源码包 (建议用`git clone`)  
+<s>执行 `npm up` 安装依赖 (已集成自动安装)</s>  
+3. 配置 `config.js` (参考注释)
+4. 运行 `node main 123456789` (数字是你的登陆账号)
 
 * 今后启动只需最后一步
-* 只有首次登陆时需要交互，推荐使用pm2或forever等部署工具。
+* 只有首次登陆时需要交互(密码、验证码、设备锁)，之后推荐使用pm2或forever等部署工具。
 
 ----
 
@@ -130,5 +130,6 @@
 * [x] WS心跳
 * [ ] 事件上报过滤
 * [ ] _rate_limited限速调用api
+* [x] 自动更新内核版本
 
 [内核功能支持和CQ码](https://github.com/takayama-lily/oicq/blob/dev/docs/project.md)
