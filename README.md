@@ -86,7 +86,7 @@
 <summary>点开</summary>
 
 新版事件的notice部分的上报格式默认与cqhttp中的格式不同。  
-如需使用cqhttp格式，在config.js中加上 `use_cqhttp_notice: true` 的配置即可。
+如需使用cqhttp格式，在config.js中将`use_cqhttp_notice`设置为`true`。
 
 ||新版格式([文档](https://github.com/takayama-lily/oicq/blob/master/docs/event.md))|cqhttp格式([文档](https://github.com/howmanybots/onebot/blob/master/v11/specs/event/README.md))|
 |-|-|-|
@@ -130,7 +130,7 @@
 * [x] 鉴权
 * [x] WS心跳
 * [ ] 事件上报过滤
-* [ ] _rate_limited限速调用api
+* [x] _rate_limited限速调用api
 * [x] 自动更新内核版本
 
 [内核功能支持和CQ码](https://github.com/takayama-lily/oicq/blob/dev/docs/project.md)
