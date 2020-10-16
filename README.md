@@ -73,6 +73,7 @@
 |set_birthday           |birthday|设置生日 格式：20110202
 |set_description        |description|设置个人说明
 |set_signature          |signature|设置签名
+|set_portrait           |file|设置个人头像，与CQ码中的file格式相同
 
 </details>
 
