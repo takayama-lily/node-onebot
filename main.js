@@ -24,7 +24,8 @@ try {
     fs.writeFileSync(testfile, "");
     fs.unlinkSync(testfile);
 } catch(e) {
-    logger.error("数据文件夹不可写，进程退出。")
+    logger.error("数据文件夹不可写，进程退出。");
+    logger.error(e.message);
     process.exit(0);
 }
 
