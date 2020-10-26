@@ -15,7 +15,6 @@ try {
 }
 
 require("oicq");
-const logger = process.OICQ.logger;
 const data_dir = path.join(process.mainModule.path, "data");
 try {
     if (!fs.existsSync(data_dir))
@@ -24,8 +23,8 @@ try {
     fs.writeFileSync(testfile, "");
     fs.unlinkSync(testfile);
 } catch(e) {
-    logger.error("数据文件夹不可写，进程退出。");
-    logger.error(e.message);
+    console.log("数据文件夹不可写，进程退出。");
+    console.log(e.message);
     process.exit(0);
 }
 
@@ -36,7 +35,7 @@ function inputAccount() {
     if (account > 10000 && account < 0xffffffff) {
         return require("./lib/core")(account);
     }
-    logger.info("请输入账号：");
+    console.log("请输入账号：");
     process.stdin.once("data", (input)=>{
         account = parseInt(input.toString().trim());
         inputAccount();
