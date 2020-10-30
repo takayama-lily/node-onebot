@@ -1,15 +1,15 @@
-# http-api
+# http-api ([onebot](https://cqhttp.cc))
 
 [![core](https://img.shields.io/badge/core-oicq-brightgreen)](https://github.com/takayama-lily/oicq)
 [![node engine](https://img.shields.io/node/v/oicq.svg)](https://nodejs.org)
 
 **使用方法：**
 
-1. 下载安装 [nodejs](https://nodejs.org) (v12.16以上)
+1. 下载安装 [nodejs](https://nodejs.org)
 2. 下载此源码包 (建议用`git clone`)  
 <s>执行 `npm up` 安装依赖 (已集成自动安装)</s>  
-3. 重命名 `config.sample.js` 为 `config.js` 并配置(参考注释)
-4. 运行 `node main 123456789` (数字是你的登陆账号)
+3. 重命名 `config.sample.js` 为 `config.js` 并配置
+4. 运行 `node main 123456789` (数字是登陆账号)
 
 * 今后启动只需最后一步
 * 只有首次登陆时需要交互(密码、验证码、设备锁)，之后推荐使用pm2或forever等部署工具。
@@ -24,13 +24,13 @@
 
 ----
 
-## API ([文档](https://github.com/howmanybots/onebot/blob/master/v11/specs/api/public.md)）
+## API
 
 <details>
 
-<summary>点开</summary>
+<summary>已实现</summary>
 
-|名称|参数(文档里有的不列了)|备注|
+|名称|参数([参考文档](https://github.com/howmanybots/onebot/blob/master/v11/specs/api/public.md))|备注|
 |-|-|-|
 |get_friend_list        ||
 |get_stranger_list      ||
@@ -47,7 +47,7 @@
 |set_friend_add_request ||
 |set_group_add_request  ||
 |send_group_notice      ||
-|send_group_poke        ||群戳一戳，未来可能会用CQ码实现
+|send_group_poke        |group_id<br>user_id|群戳一戳，未来可能会用CQ码实现
 |set_group_special_title||
 |set_group_admin        ||
 |set_group_card         ||
@@ -75,6 +75,26 @@
 |set_description        |description|设置个人说明
 |set_signature          |signature|设置签名
 |set_portrait           |file|设置个人头像，与CQ码中的file格式相同
+|get_cookies            ||更新可能存在问题
+|get_csrf_token         ||更新可能存在问题
+|clean_cache            ||
+
+</details>
+
+<details>
+
+<summary>尚未实现</summary>
+
+|名称|是否计划实现|
+|-|-|
+|get_msg|否|
+|get_forward_msg|否|
+|get_group_honor_info|否|
+|get_credentials|否|
+|get_record|否|
+|get_image|否|
+|set_group_snonymous_ban|是|
+|set_restart|是|
 
 </details>
 
@@ -135,3 +155,13 @@
 * [x] 自动更新内核版本
 
 [内核功能支持和CQ码](https://github.com/takayama-lily/oicq/blob/dev/docs/project.md)
+
+----
+
+### 为什么要使用Nodejs
+
+* 依附于强大的node&v8引擎，高速稳定，彻底告别平台兼容性导致的异常崩溃等问题
+* 利用npm包管理器一键更新依赖库，版本升级简单方便
+* node是单线程事件循环，非常适合此类io密集型应用，从根源上杜绝多线程带来数据竞争等奇怪问题
+* 使用最新的ECMAScript2010语法，用最少的代码实现所需功能，项目可维护性显著上升
+* 考虑到JavaScript仍然是使用人数最多的编程语言，而node运行时完全开源，任何人都可以尝试解决问题，而不仅限于发现问题
