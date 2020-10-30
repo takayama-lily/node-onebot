@@ -8,6 +8,16 @@ const path = require("path");
 const fs = require("fs");
 
 try {
+    require("./config.js");
+} catch (e) {
+    console.log(e.message)
+    console.log(`
+请重命名 config.sample.js 文件
+`);
+    process.exit(0);
+}
+
+try {
     console.log(`正在检查&更新内核版本..`);
     require("child_process").execSync("npm up", {stdio: "ignore"});
 } catch (e) {

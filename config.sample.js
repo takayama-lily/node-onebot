@@ -1,4 +1,9 @@
 "use strict";
+
+// 为了不在更新时出现冲突
+// 今后使用此config.sample.js文件作为样板文件
+// 需自行更名为config.js
+
 module.exports = {
 
     //通用配置
@@ -6,8 +11,6 @@ module.exports = {
         platform:           2,      //1手机 2平板 3手表(部分事件不支持)
         kickoff:            false,  //被挤下线是否在3秒后反挤对方
         ignore_self:        true,   //群聊是否无视自己的发言
-        web_image_timeout:  30,     //下载网络图片的超时时间(秒)
-        web_record_timeout: 30,     //下载网络语音的超时时间(秒)
         debug:              false,  //开启debug
         use_cqhttp_notice:  false,  //是否使用cqhttp标准的notice事件格式
 

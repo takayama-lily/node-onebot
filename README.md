@@ -8,7 +8,7 @@
 1. 下载安装 [nodejs](https://nodejs.org) (v12.16以上)
 2. 下载此源码包 (建议用`git clone`)  
 <s>执行 `npm up` 安装依赖 (已集成自动安装)</s>  
-3. 配置 `config.js` (参考注释)
+3. 重命名 `config.sample.js` 为 `config.js` 并配置(参考注释)
 4. 运行 `node main 123456789` (数字是你的登陆账号)
 
 * 今后启动只需最后一步
