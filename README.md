@@ -42,6 +42,7 @@
 |send_private_msg       ||返回的message_id是字符串格式
 |send_group_msg         ||返回的message_id是字符串格式
 |send_discuss_msg       |discuss_id<br>message<br>auto_escape|发讨论组消息，没有message_id
+|send_msg               ||
 |delete_msg             ||
 |set_friend_add_request ||
 |set_group_add_request  ||
@@ -64,7 +65,7 @@
 |get_version_info       ||暂时返回的是内核版本
 |.handle_quick_operation||仅WS有效
 |set_online_status      |status|设置在线状态(※仅限手机协议支持)<br>11我在线上 31离开 41隐身 50忙碌 60Q我吧 70请勿打扰|
-|add_group              |group_id<br>comment|加群和加好友是风险接口，每日添加超过一定数量账号会被风控
+|add_group              |group_id<br>comment|加群和加好友是风险接口，频繁调用账号会被风控
 |add_friend             |group_id<br>user_id<br>comment|添加好友<br>暂时只能添加群员
 |delete_friend          |user_id<br>block|删除好友<br>block默认为true
 |invite_friend          |group_id<br>user_id|邀请好友入群

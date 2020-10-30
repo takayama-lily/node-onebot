@@ -10,7 +10,7 @@ const fs = require("fs");
 try {
     require("./config.js");
 } catch (e) {
-    console.log(e.message)
+    console.log(e.message);
     console.log(`
 请重命名 config.sample.js 文件
 `);
