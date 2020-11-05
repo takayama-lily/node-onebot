@@ -1,6 +1,6 @@
 # node-onebot
 
-* 基于 [oicq](https://github.com/takayama-lily/oicq) 的QQ机器人http-api
+* 基于 [npm-oicq](https://github.com/takayama-lily/oicq) 的QQ机器人http-api
 * [onebot(cqhttp)](https://cqhttp.cc) 协议的实现
 
 [![core](https://img.shields.io/badge/core-oicq-brightgreen)](https://www.npmjs.com/package/oicq)
