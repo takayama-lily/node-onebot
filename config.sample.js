@@ -10,7 +10,8 @@ module.exports = {
     general: {
         platform:           2,      //1手机 2平板 3手表(部分事件不支持)
         kickoff:            false,  //被挤下线是否在3秒后反挤对方
-        ignore_self:        true,   //群聊是否无视自己的发言
+        ignore_self:        true,   //群聊和私聊是否无视自己的发言
+        resend:             true,   //被风控的消息是否尝试以另一种方式再次发送(目前不清楚会有什么弊端，但是确实有效)
         debug:              false,  //开启debug
         use_cqhttp_notice:  false,  //是否使用cqhttp标准的notice事件格式
 
