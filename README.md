@@ -38,8 +38,8 @@
 |get_group_member_list  |
 |get_group_member_info  |
 |get_stranger_info      |
-|send_private_msg       |返回的message_id是字符串格式
-|send_group_msg         |返回的message_id是字符串格式
+|send_private_msg       |message_id是string
+|send_group_msg         |message_id是string
 |send_msg               |
 |delete_msg             |
 |set_friend_add_request |
@@ -58,10 +58,10 @@
 |can_send_image         |
 |can_send_record        |
 |get_status             |
-|get_version_info       |暂时返回的是内核版本
+|get_version_info       |
 |.handle_quick_operation|仅WS有效
-|get_cookies            |暂时更新可能存在问题
-|get_csrf_token         |暂时更新可能存在问题
+|get_cookies            |
+|get_csrf_token         |
 |clean_cache            |
 
 </details>
@@ -87,6 +87,7 @@
 |set_description        |description|设置个人说明
 |set_signature          |signature|设置签名
 |set_portrait           |file|设置个人头像，与CQ码中的file格式相同
+|set_group_portrait     |file|设置群头像
 
 </details>
 
@@ -174,6 +175,6 @@
 * 利用npm包管理器自动更新依赖库，版本升级简单方便。
 * 运行时几乎没有垃圾文件产生，占用最低限资源。
 * 依附于强大的node&v8引擎，高速稳定，彻底告别平台兼容性导致的异常崩溃等问题。
-* 单线程事件循环搭配语言层面的协程，非常适合此类io密集型应用，从根源上杜绝多线程带来的数据竞争等奇怪问题。
+* 以单线程事件循环为主要模型，从根源上杜绝多线程带来的数据不一致等奇怪问题。
 * 考虑到JavaScript仍然是使用人数最多的编程语言，而项目运行时完全开源，使得任何人都可以尝试解决问题，而不仅限于发现问题。
 * 使用最新的ECMAScript2010语法，用最少的代码实现所需功能，使项目可维护性显著提升。便于阅读和调试的源码，带你走进底层OICQ协议的世界。
