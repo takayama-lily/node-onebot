@@ -1,7 +1,7 @@
 "use strict";
 // 将此文件更名为config.js才能生效哦
 // 如果需要更详细的日志，可以在general中添加配置项 log_level: "trace",
-// 其他可用的日志等级："warn", "error", "off"
+// 其他可用的日志等级："debug", "info", warn", "error", "off"
 
 module.exports = {
 
