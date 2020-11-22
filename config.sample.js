@@ -1,7 +1,5 @@
 "use strict";
 // 将此文件更名为config.js才能生效哦
-// 如果需要更详细的日志，可以在general中添加配置项 log_level: "trace",
-// 其他可用的日志等级："debug", "info", warn", "error", "off"
 
 module.exports = {
 
@@ -43,3 +41,11 @@ module.exports = {
 
     }
 };
+
+// 如果需要更详细的日志，可以在general中添加配置项 log_level: "trace",
+// 其他可用的日志等级："debug", "info", warn", "error", "off"
+
+// 安全注意：
+// 监听0.0.0.0表示监听网卡上的所有地址。如果你的机器可以通过公网ip直接访问，同时你也没有设定access_token，则被认为是极不安全的。
+// 你应该知道这样做会导致以下后果：任何人都可以无限制地访问你的Bot的所有API接口。
+// 所以，如果只需要在本地访问，你最好将监听地址改为localhost。需要通过公网访问，你最好设定access_token。
