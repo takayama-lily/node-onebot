@@ -22,7 +22,7 @@ module.exports = {
         enable_heartbeat:   false,      //是否启用ws心跳
         heartbeat_interval: 15000,      //ws心跳间隔
         rate_limit_interval:500,        //使用_rate_limited后缀限速调用api的排队间隔时间(毫秒)
-        event_filter:       "",         //事件过滤器
+        event_filter:       "",         //json格式的事件过滤器文件路径
         post_url: [
             // "http://your.address.com:80", //上报地址，可以添加多个url
         ],
