@@ -2,6 +2,7 @@
 
 * 基于 [npm-oicq](https://github.com/takayama-lily/oicq) 的QQ机器人http-api
 * [onebot(cqhttp)](https://cqhttp.cc) 协议的实现
+* 当前master分支下的v1.x版本如无bug不会再更新了。请期待v2.0的webui版本。
 
 [![core](https://img.shields.io/badge/core-oicq-brightgreen)](https://www.npmjs.com/package/oicq)
 [![node engine](https://img.shields.io/node/v/oicq.svg)](https://nodejs.org)
