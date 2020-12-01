@@ -101,6 +101,7 @@
 <summary>尚未实现</summary>
 
 |名称|
+|-|
 |get_forward_msg|
 |get_group_honor_info|
 |get_credentials|
