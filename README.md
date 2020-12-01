@@ -46,6 +46,7 @@
 |send_group_msg         |message_id是string
 |send_msg               |
 |delete_msg             |
+|get_msg                |
 |set_friend_add_request |
 |set_group_add_request  |
 |set_group_special_title|
@@ -100,8 +101,6 @@
 <summary>尚未实现</summary>
 
 |名称|
-|-|
-|get_msg|
 |get_forward_msg|
 |get_group_honor_info|
 |get_credentials|
