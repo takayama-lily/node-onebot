@@ -19,6 +19,7 @@ module.exports = {
         secret:             "",         //上报数据的sha1签名密钥
         post_timeout:       30,         //post超时时间(秒)
         post_message_format:"string",   //string或array
+        enable_cors:        false,      //是否允许跨域请求
         enable_heartbeat:   false,      //是否启用ws心跳
         heartbeat_interval: 15000,      //ws心跳间隔
         rate_limit_interval:500,        //使用_rate_limited后缀限速调用api的排队间隔时间(毫秒)

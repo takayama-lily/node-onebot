@@ -167,6 +167,9 @@
 * [x] _async异步调用api
 * [x] _rate_limited限速调用api
 * [x] [事件过滤器](https://richardchien.gitee.io/coolq-http-api/docs/4.15/#/EventFilter)
+* [x] 设置风控重发
+* [x] 设置允许跨域请求
+* [x] 设置监听自己消息
 * [x] 自动更新内核版本
 
 [内核功能支持和CQ码](https://github.com/takayama-lily/oicq/blob/dev/docs/project.md)
