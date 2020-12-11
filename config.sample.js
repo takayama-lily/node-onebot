@@ -14,7 +14,7 @@ module.exports = {
         host:               "0.0.0.0",  //监听主机名
         port:               5700,       //端口
         use_http:           false,      //启用http
-        use_ws:             false,      //启用ws，和http使用相同端口(暂不支持分端口)
+        use_ws:             false,      //启用ws，和http使用相同端口
         access_token:       "",         //访问api的token
         secret:             "",         //上报数据的sha1签名密钥
         post_timeout:       30,         //post超时时间(秒)
@@ -24,11 +24,11 @@ module.exports = {
         heartbeat_interval: 15000,      //ws心跳间隔
         rate_limit_interval:500,        //使用_rate_limited后缀限速调用api的排队间隔时间(毫秒)
         event_filter:       "",         //json格式的事件过滤器文件路径
-        post_url: [
-            // "http://your.address.com:80", //上报地址，可以添加多个url
+        post_url: [ //上报地址，可以添加多个url
+            // "http://your.address.com:80",
         ],
-        ws_reverse_url: [ 
-            // "ws://your.address.com:8080", //反向ws地址，可以添加多个url(暂不支持将api和event分两个通道)
+        ws_reverse_url: [ //反向ws地址，可以添加多个url(暂不支持将api和event分两个通道)
+            // "ws://your.address.com:8080",
         ],
         ws_reverse_reconnect_interval: 3000, //反向ws断线重连间隔(毫秒)
     },
