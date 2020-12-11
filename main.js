@@ -43,6 +43,7 @@ inputAccount();
 
 function inputAccount() {
     if (account > 10000 && account < 0xffffffff) {
+        process.title = "OICQ/OneBot - " + account;
         return require("./lib/core")(account);
     }
     console.log("请输入账号：");
