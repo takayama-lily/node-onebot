@@ -2,7 +2,7 @@
 
 * 基于 [npm-oicq](https://github.com/takayama-lily/oicq) 的QQ机器人http-api
 * [onebot(cqhttp)](https://cqhttp.cc) 协议的实现
-* 当前master分支下的v1.x版本如无bug不会再更新了。请期待v2.0的webui版本。
+* 当前master分支下的版本基本不会再有变化，及时更新依赖即可获得新特性和已知bug的修复。
 
 [![core](https://img.shields.io/badge/core-oicq-brightgreen)](https://www.npmjs.com/package/oicq)
 [![node engine](https://img.shields.io/node/v/oicq.svg)](https://nodejs.org)
@@ -42,8 +42,8 @@
 |get_group_member_list  |
 |get_group_member_info  |
 |get_stranger_info      |
-|send_private_msg       |message_id是string
-|send_group_msg         |message_id是string
+|**send_private_msg**   |message_id是string
+|**send_group_msg**     |message_id是string
 |send_msg               |
 |delete_msg             |
 |get_msg                |
