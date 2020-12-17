@@ -5,7 +5,7 @@ module.exports = {
 
     //通用配置
     general: {
-        platform:           2,      //1手机 2平板 3手表(部分事件不支持)
+        platform:           2,      //1手机 2平板 3手表 4Mac
         ignore_self:        true,   //群聊和私聊是否无视自己的发言
         resend:             true,   //被风控的消息是否尝试以分片再次发送（分片是一种古老的消息，暂不支持撤回等操作）
         debug:              false,  //开启debug
