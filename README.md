@@ -108,7 +108,7 @@
 |get_vip_info|
 |get_record|
 |get_image|
-|set_group_snonymous_ban|
+|set_group_anonymous_ban|
 |set_restart|
 
 </details>
