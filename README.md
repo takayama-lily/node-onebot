@@ -57,7 +57,7 @@
 |set_group_leave        |
 |set_group_name         |
 |set_group_whole_ban    |
-|set_group_anonymous_ban|
+|set_group_anonymous_ban|仅支持flag字段，不支持另外两种
 |set_group_anonymous    |
 |send_like              |
 |get_login_info         |
