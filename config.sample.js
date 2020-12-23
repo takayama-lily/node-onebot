@@ -14,7 +14,7 @@ module.exports = {
         host:               "0.0.0.0",  //监听主机名
         port:               5700,       //端口
         use_http:           false,      //启用http
-        use_ws:             false,      //启用ws，和http使用相同地址和端口
+        use_ws:             false,      //启用正向ws，和http使用相同地址和端口
         access_token:       "",         //访问api的token
         secret:             "",         //上报数据的sha1签名密钥
         post_timeout:       30,         //post超时时间(秒)
