@@ -57,6 +57,7 @@
 |set_group_leave        |
 |set_group_name         |
 |set_group_whole_ban    |
+|set_group_anonymous_ban|
 |set_group_anonymous    |
 |send_like              |
 |get_login_info         |
@@ -108,7 +109,6 @@
 |get_vip_info|
 |get_record|
 |get_image|
-|set_group_anonymous_ban|
 |set_restart|
 
 </details>
