@@ -5,23 +5,23 @@ module.exports = {
 
     //通用配置
     general: {
-        platform:           2,      //1手机 2平板 3手表 4Mac
+        platform:           2,      //1安卓手机 2apad 3安卓手表 4MacOS(实验) 5iPad(实验)
         ignore_self:        true,   //群聊和私聊是否无视自己的发言
-        resend:             true,   //被风控的消息是否尝试以分片再次发送（分片是一种古老的消息，暂不支持撤回等操作）
+        resend:             true,   //被风控的消息是否尝试以分片再次发送（分片是一种古老的消息）
         debug:              false,  //开启debug
         use_cqhttp_notice:  false,  //是否使用cqhttp标准的notice事件格式
 
         host:               "0.0.0.0",  //监听主机名
         port:               5700,       //端口
         use_http:           false,      //启用http
-        use_ws:             false,      //启用ws，和http使用相同端口
+        use_ws:             false,      //启用ws，和http使用相同地址和端口
         access_token:       "",         //访问api的token
         secret:             "",         //上报数据的sha1签名密钥
         post_timeout:       30,         //post超时时间(秒)
         post_message_format:"string",   //string或array
         enable_cors:        false,      //是否允许跨域请求
         enable_heartbeat:   false,      //是否启用ws心跳
-        heartbeat_interval: 15000,      //ws心跳间隔
+        heartbeat_interval: 15000,      //ws心跳间隔(毫秒)
         rate_limit_interval:500,        //使用_rate_limited后缀限速调用api的排队间隔时间(毫秒)
         event_filter:       "",         //json格式的事件过滤器文件路径
         post_url: [ //上报地址，可以添加多个url
@@ -37,16 +37,12 @@ module.exports = {
     123456789: {
 
     },
-
-    987654321: {
-
-    }
 };
 
-// 如果需要更详细的日志，可以在general中添加配置项 log_level: "trace",
+// 如果需要更详细的日志，可以在添加配置项 log_level: "trace",
 // 其他可用的日志等级："debug", "info", warn", "error", "off"
 
 // 安全注意：
 // 监听0.0.0.0表示监听网卡上的所有地址。如果你的机器可以通过公网ip直接访问，同时你也没有设定access_token，则被认为是极不安全的。
 // 你应该知道这样做会导致以下后果：任何人都可以无限制地访问你的Bot的所有API接口。
-// 所以，如果只需要在本地访问，你最好将监听地址改为localhost。需要通过公网访问，你最好设定access_token。
+// 如果只需要在本地访问，建议将监听地址改为localhost。需要通过公网访问，你最好设定access_token。
