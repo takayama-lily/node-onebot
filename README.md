@@ -3,6 +3,8 @@
 * 基于 [npm-oicq](https://github.com/takayama-lily/oicq) 的QQ机器人http-api
 * [onebot(cqhttp)](https://cqhttp.cc) 协议的实现
 * 当前master分支下的版本基本不会再有变化，及时更新依赖即可获得新特性和已知bug的修复。
+* [如何获得滑动验证码的ticket](https://github.com/takayama-lily/onebot/issues/28)
+* [环境异常等问题](https://github.com/takayama-lily/onebot/issues/12)
 
 [![core](https://img.shields.io/badge/core-oicq-brightgreen)](https://www.npmjs.com/package/oicq)
 [![node engine](https://img.shields.io/node/v/oicq.svg)](https://nodejs.org)
