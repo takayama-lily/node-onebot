@@ -10,9 +10,9 @@ const fs = require("fs");
 try {
     require("./config.js");
 } catch (e) {
-    console.log(e.message);
+    console.log(e);
     console.log(`
-请重命名 config.sample.js 文件
+未找到config.js文件或配置有语法错误
 `);
     process.exit(0);
 }
@@ -33,8 +33,8 @@ try {
     fs.writeFileSync(testfile, "");
     fs.unlinkSync(testfile);
 } catch(e) {
+    console.log(e);
     console.log("数据文件夹不可写，进程退出。");
-    console.log(e.message);
     process.exit(0);
 }
 
