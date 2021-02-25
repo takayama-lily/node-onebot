@@ -5,8 +5,8 @@
 * 基于 [npm-oicq](https://github.com/takayama-lily/oicq) 的QQ机器人Http-Api
 * [onebot(cqhttp)](https://cqhttp.cc) 协议的实现
 * 当前master分支下的版本基本不会再有变化，及时更新依赖即可获得新特性和已知bug的修复。
-* [如何获得滑动验证码的ticket](https://github.com/takayama-lily/onebot/issues/28)
-* [环境异常等问题](https://github.com/takayama-lily/onebot/issues/12)
+* [如何获得滑动验证码的ticket](https://github.com/takayama-lily/oicq/wiki/01.%E6%BB%91%E5%8A%A8%E9%AA%8C%E8%AF%81%E7%A0%81%E5%92%8C%E8%AE%BE%E5%A4%87%E9%94%81)
+* [常见问题](https://github.com/takayama-lily/oicq/wiki/02.%E5%85%B6%E4%BB%96%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
 
 [![core](https://img.shields.io/badge/core-oicq-brightgreen)](https://www.npmjs.com/package/oicq)
 [![node engine](https://img.shields.io/node/v/oicq.svg)](https://nodejs.org)
@@ -14,8 +14,7 @@
 **使用方法：**
 
 1. 下载安装 [nodejs](https://nodejs.org)
-2. 下载此源码包 (建议用`git clone`)  
-<s>执行 `npm up --no-save` 安装依赖 (已集成自动安装)</s>  
+2. 下载此源码包 (建议用`git clone`)   
 3. 重命名 `config.sample.js` 为 `config.js` 并配置
 4. 运行 `node main 123456789` (数字是登陆账号)
 
@@ -163,6 +162,10 @@
 
 ----
 
+[支持的CQ码](https://github.com/takayama-lily/oicq/wiki/90.%E5%A6%82%E4%BD%95%E5%8F%91%E9%80%81%E5%A4%9A%E5%AA%92%E4%BD%93%E5%86%85%E5%AE%B9(CQ%E7%A0%81))
+
+----
+
 ## 其他
 
 * [x] 字符串或数组消息段
@@ -175,5 +178,3 @@
 * [x] 设置允许跨域请求
 * [x] 设置监听自己消息
 * [x] 自动更新内核版本
-
-[内核功能支持和CQ码](https://github.com/takayama-lily/oicq/blob/dev/docs/project.md)
