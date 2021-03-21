@@ -14,12 +14,14 @@
 **使用方法：**
 
 1. 下载安装 [nodejs](https://nodejs.org)
-2. 下载此源码包 (建议用`git clone`)   
+2. 下载此源码包 (建议用`git clone`)  
 3. 重命名 `config.sample.js` 为 `config.js` 并配置
 4. 运行 `node main 123456789` (数字是登陆账号)
 
 * 今后启动只需最后一步
 * 只有首次登陆时需要交互(密码、验证码、设备锁)，之后推荐使用pm2或forever等部署工具。
+
+> config.js 支持更多的配置，可参考 [ConfBot](https://github.com/takayama-lily/oicq/blob/4e24fa15728fcf7e305b08425227b6cbb094550b/client.d.ts#L12)
 
 ----
 

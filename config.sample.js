@@ -5,11 +5,9 @@ module.exports = {
 
     //通用配置
     general: {
-        platform:           1,      //1安卓手机 2aPad 3安卓手表 4MacOS(实验) 5iPad(实验)
-        ignore_self:        true,   //群聊和私聊是否无视自己的发言
-        resend:             true,   //被风控的消息是否尝试以分片再次发送（分片是一种古老的消息）
+        platform:           1,      //1:安卓手机 2:aPad 3:安卓手表 4:MacOS 5:iPad
         debug:              false,  //开启debug
-        use_cqhttp_notice:  false,  //是否使用cqhttp标准的notice事件格式
+        use_cqhttp_notice:  true,   //是否使用cqhttp标准的notice事件格式
 
         host:               "0.0.0.0",  //监听主机名
         port:               5700,       //端口
@@ -18,7 +16,7 @@ module.exports = {
         access_token:       "",         //访问api的token
         secret:             "",         //上报数据的sha1签名密钥
         post_timeout:       30,         //post超时时间(秒)
-        post_message_format:"string",   //string或array
+        post_message_format:"array",    //"string"或"array"
         enable_cors:        false,      //是否允许跨域请求
         enable_heartbeat:   false,      //是否启用ws心跳
         heartbeat_interval: 15000,      //ws心跳间隔(毫秒)
@@ -27,7 +25,7 @@ module.exports = {
         post_url: [ //上报地址，可以添加多个url
             // "http://your.address.com:80",
         ],
-        ws_reverse_url: [ //反向ws地址，可以添加多个url(暂不支持将api和event分两个通道)
+        ws_reverse_url: [ //反向ws地址，可以添加多个url
             // "ws://your.address.com:8080",
         ],
         ws_reverse_reconnect_interval: 3000, //反向ws断线重连间隔(毫秒)
@@ -38,9 +36,6 @@ module.exports = {
 
     },
 };
-
-// 如果需要更详细的日志，可以在添加配置项 log_level: "trace",
-// 其他可用的日志等级："debug", "info", warn", "error", "off"
 
 // 安全注意：
 // 监听0.0.0.0表示监听网卡上的所有地址。如果你的机器可以通过公网ip直接访问，同时你也没有设定access_token，则被认为是极不安全的。
