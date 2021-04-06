@@ -1,6 +1,6 @@
 # node-onebot
 
-> 基于 [oicq](https://github.com/takayama-lily/oicq) 的 [onebot(cqhttp)](https://cqhttp.cc) 协议的实现  
+> 基于 [oicq](https://github.com/takayama-lily/oicq) 的 [onebot(cqhttp)](https://cqhttp.cc) QQ机器人协议的实现  
 > 将机器人部署为独立的服务，通过http或ws与外界通信
 
 [![core](https://img.shields.io/badge/core-oicq-brightgreen)](https://www.npmjs.com/package/oicq)
@@ -8,7 +8,7 @@
 
 **使用方法：**
 
-1. 下载安装 [nodejs](https://nodejs.org) (版本必须高于v12.16)
+1. 下载安装 [nodejs](https://nodejs.org) 安装版 (版本必须高于v12.16)
 2. 下载此源码包 (建议用`git clone`)  
 3. 重命名 `config.sample.js` 为 `config.js` 并配置
 4. 运行 `node main 123456789` (数字是登陆账号)
@@ -18,7 +18,7 @@
 
 > config.js 支持更多的配置，可参考 [ConfBot](https://github.com/takayama-lily/oicq/blob/4e24fa15728fcf7e305b08425227b6cbb094550b/client.d.ts#L12)  
 > [如何获得滑动验证码的ticket](https://github.com/takayama-lily/oicq/wiki/01.%E6%BB%91%E5%8A%A8%E9%AA%8C%E8%AF%81%E7%A0%81%E5%92%8C%E8%AE%BE%E5%A4%87%E9%94%81)  
-> [常见问题](https://github.com/takayama-lily/oicq/wiki/02.%E5%85%B6%E4%BB%96%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)  
+> [其他常见问题](https://github.com/takayama-lily/oicq/wiki/02.%E5%85%B6%E4%BB%96%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)  
 > 当前master分支下的版本基本不会再有变化，及时更新依赖即可获得新特性和已知bug的修复。
 
 ----
@@ -97,6 +97,10 @@
 |set_signature          |signature|设置签名
 |set_portrait           |file|设置个人头像，与CQ码中的file格式相同
 |set_group_portrait     |file|设置群头像
+|get_system_msg         ||获得未处理的申请
+|get_chat_history       |message_id<br>count|返回message_id往前的count条消息<br>count默认20
+|get_forward_msg        |resid|
+|send_temp_msg          |group_id<br>user_id<br>message<br>auto_escape|
 
 </details>
 
@@ -106,7 +110,6 @@
 
 |名称|
 |-|
-|get_forward_msg|
 |get_group_honor_info|
 |get_credentials|
 |get_vip_info|
@@ -127,7 +130,7 @@
 新版事件的notice部分的上报格式默认与cqhttp中的格式不同。  
 如需使用cqhttp格式，在config.js中将`use_cqhttp_notice`设置为`true`。
 
-||新版格式([文档](https://github.com/takayama-lily/oicq/blob/master/docs/event.md))|cqhttp格式([文档](https://github.com/howmanybots/onebot/blob/master/v11/specs/event/README.md))|
+||新版格式([文档](https://github.com/takayama-lily/oicq/wiki/92.%E4%BA%8B%E4%BB%B6%E6%96%87%E6%A1%A3))|cqhttp格式([文档](https://github.com/howmanybots/onebot/blob/master/v11/specs/event/README.md))|
 |-|-|-|
 |好友请求|request.friend.add     |request.friend         |
 |加群请求|request.group.add      |request.group.add      |
@@ -174,7 +177,5 @@
 * [x] _async异步调用api
 * [x] _rate_limited限速调用api
 * [x] [事件过滤器](https://richardchien.gitee.io/coolq-http-api/docs/4.15/#/EventFilter)
-* [x] 设置风控重发
 * [x] 设置允许跨域请求
-* [x] 设置监听自己消息
 * [x] 自动更新内核版本
