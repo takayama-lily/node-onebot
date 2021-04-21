@@ -86,8 +86,7 @@
 |send_group_notice      |content|发送群公告
 |send_group_poke        |group_id<br>user_id|群戳一戳，未来可能会用CQ码实现
 |set_online_status      |status|设置在线状态(※仅限手机协议支持)<br>11我在线上 31离开 41隐身 50忙碌 60Q我吧 70请勿打扰|
-|add_group              |group_id<br>comment|加群和加好友是风险接口，频繁调用账号会被风控
-|add_friend             |group_id<br>user_id<br>comment|添加好友<br>暂时只能添加群员
+|add_friend             |group_id<br>user_id<br>comment|添加群员为好友
 |delete_friend          |user_id<br>block|删除好友<br>block默认为true
 |invite_friend          |group_id<br>user_id|邀请好友入群
 |set_nickname           |nickname|设置昵称
