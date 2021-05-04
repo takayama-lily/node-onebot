@@ -252,6 +252,10 @@ export default class Onebot {
         for (const ws of this.wsr)
             ws.close()
         if (this.server) {
+            if (this.wss) {
+                for (const ws of this.wss.clients)
+                    ws.close()
+            }
             return new Promise((resolve) => {
                 this.server?.close(resolve)
             })
