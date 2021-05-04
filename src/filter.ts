@@ -1,22 +1,7 @@
-"use strict";
-const fs = require("fs");
-let filter, event;
+//@ts-nocheck
+let event: any;
 
-function init(filepath) {
-    if (filepath) {
-        try {
-            filter = fs.readFileSync(filepath, "utf8");
-            filter = JSON.parse(filter);
-            console.log("已启用事件过滤器。")
-        } catch (e) {
-            console.log(e.message);
-            console.log("加载事件过滤器失败，进程退出。");
-            process.exit(0);
-        }
-    }
-}
-
-function _exec(o = filter, op = "and", field) {
+function _exec(o: any, op = "and", field): boolean {
 
     if (["and", "not", "or"].includes(op)) {
         if (Array.isArray(o)) {
@@ -80,49 +65,45 @@ function _exec(o = filter, op = "and", field) {
     return true;
 }
 
-function test() {
-    init("../filter.json");
-    const e = {
-        self_id: 123456,
-        time: 1606094532,
-        post_type: "message",
-        message_type: "group",
-        sub_type: "normal",
-        message_id: "REAq4xY6N/UAAAJIIjI65l+7DsQ=",
-        group_id: 123456,
-        group_name: "ddddd",
-        user_id: 123456,
-        anonymous: null,
-        message: "data",
-        raw_message: "data",
-        font: "微软雅黑",
-        sender: {
-          user_id: 123456,
-          nickname: "123456",
-          card: "",
-          sex: "female",
-          age: 115,
-          area: "上海",
-          level: 2,
-          role: "member",
-          title: ""
-        }
-      };
-    console.log(assert(e));
-}
+// function test() {
+//     const filter = {}
+//     const e = {
+//         self_id: 123456,
+//         time: 1606094532,
+//         post_type: "message",
+//         message_type: "group",
+//         sub_type: "normal",
+//         message_id: "REAq4xY6N/UAAAJIIjI65l+7DsQ=",
+//         group_id: 123456,
+//         group_name: "ddddd",
+//         user_id: 123456,
+//         anonymous: null,
+//         message: "data",
+//         raw_message: "data",
+//         font: "微软雅黑",
+//         sender: {
+//           user_id: 123456,
+//           nickname: "123456",
+//           card: "",
+//           sex: "female",
+//           age: 115,
+//           area: "上海",
+//           level: 2,
+//           role: "member",
+//           title: ""
+//         }
+//       };
+//     console.log(assert(filter, e));
+// }
 // test()
 
-function assert(e) {
+export function assert(filter: any, e: any) {
     if (!filter)
         return true;
     event = e;
     try {
-        return _exec();
+        return _exec(filter);
     } catch {
         return false;
     }
 }
-
-module.exports = {
-    init, assert
-};
