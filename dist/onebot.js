@@ -76,6 +76,8 @@ class Onebot {
                     res.on("data", (chunk) => data += chunk);
                     res.on("end", () => {
                         this.bot.logger.debug(`插件Onebot - 收到HTTP响应 ${res.statusCode} ：` + data);
+                        if (!data)
+                            return;
                         try {
                             this._quickOperate(unserialized, JSON.parse(data));
                         }
