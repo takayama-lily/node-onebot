@@ -1,8 +1,10 @@
 # oicq-plugin-onebot
 
-该版本(v2)以 [abot](https://github.com/takayama-lily/abot) 插件的形式提供
+> 当前默认分支为v2
 
-新增了 `set_restart` API，其余功能不变，查看文档或使用独立运行版请访问 [v1](https://github.com/takayama-lily/node-onebot/tree/master)
+v2: 以 [abot](https://github.com/takayama-lily/abot) 插件的形式提供，新增了 `set_restart` API，其余功能不变
+
+[v1](https://github.com/takayama-lily/node-onebot/tree/master): 独立运行版，以及查看文档请访问此分支
 
 **Usage:**
 
