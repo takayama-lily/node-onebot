@@ -101,7 +101,7 @@ class Onebot {
         let unserialized = data;
         switch (data.post_type) {
             case "message":
-                if (this.config.post_message_format) {
+                if (this.config.post_message_format === "string") {
                     unserialized = clone(unserialized);
                     unserialized.message = data.raw_message;
                 }
