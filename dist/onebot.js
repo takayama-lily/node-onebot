@@ -43,9 +43,9 @@ class Onebot {
             for (const ws of this.wss.clients) {
                 ws.send(serialized, (err) => {
                     if (err)
-                        this.bot.logger.error(`插件Onebot - 反向WS(${ws.url})上报事件失败: ` + err.message);
+                        this.bot.logger.error(`插件Onebot - 正向WS(${ws.url})上报事件失败: ` + err.message);
                     else
-                        this.bot.logger.debug(`插件Onebot - 反向WS(${ws.url})上报事件成功: ` + serialized);
+                        this.bot.logger.debug(`插件Onebot - 正向WS(${ws.url})上报事件成功: ` + serialized);
                 });
             }
         }
