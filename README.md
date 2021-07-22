@@ -2,6 +2,7 @@
 
 > 基于 [oicq](https://github.com/takayama-lily/oicq) 的 [onebot(cqhttp)](https://cqhttp.cc) QQ机器人协议的实现  
 > 将机器人部署为独立的服务，通过http或ws与外界通信  
+> 已支持手机QQ扫码直接登录(提示输入密码时直接按回车)  
 > master分支是独立运行班，另提供[插件版](https://github.com/takayama-lily/node-onebot/tree/v2)
 
 [![core](https://img.shields.io/badge/core-oicq-brightgreen)](https://www.npmjs.com/package/oicq)
@@ -21,7 +22,7 @@
 > config.js 支持更多的配置，可参考 [ConfBot](https://github.com/takayama-lily/oicq/blob/4e24fa15728fcf7e305b08425227b6cbb094550b/client.d.ts#L12)  
 > [如何获得滑动验证码的ticket](https://github.com/takayama-lily/oicq/wiki/01.%E6%BB%91%E5%8A%A8%E9%AA%8C%E8%AF%81%E7%A0%81%E5%92%8C%E8%AE%BE%E5%A4%87%E9%94%81)  
 > [其他常见问题](https://github.com/takayama-lily/oicq/wiki/02.%E5%85%B6%E4%BB%96%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)  
-> 当前master分支下的版本基本不会再有变化，及时更新依赖即可获得新特性和已知bug的修复。
+> 当前master分支下只进行http/ws的bug修复，及时更新依赖即可获得新特性。
 
 ----
 
