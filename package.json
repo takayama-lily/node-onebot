@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/takayama-lily/onebot#readme",
   "dependencies": {
-    "oicq": "^1.18.0",
-    "ws": "^7.4.1"
+    "oicq": "^1.18.1",
+    "ws": "^7.5.3"
   }
 }
