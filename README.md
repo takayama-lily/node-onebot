@@ -3,7 +3,7 @@
 > 基于 [oicq](https://github.com/takayama-lily/oicq) 的 [onebot(cqhttp)](https://cqhttp.cc) QQ机器人协议的实现  
 > 将机器人部署为独立的服务，通过http或ws与外界通信  
 > 已支持手机QQ扫码直接登录(提示输入密码时直接按回车)  
-> master分支是独立运行班，另提供[插件版](https://github.com/takayama-lily/node-onebot/tree/v2)
+> master分支是独立运行版，另提供[插件版](https://github.com/takayama-lily/node-onebot/tree/v2)
 
 [![core](https://img.shields.io/badge/core-oicq-brightgreen)](https://www.npmjs.com/package/oicq)
 [![node engine](https://img.shields.io/node/v/oicq.svg)](https://nodejs.org)
