@@ -155,7 +155,6 @@
 |群组禁言|notice.group.ban       |notice.group_ban       |
 |群组转让|notice.group.transfer  |                       |
 |群组文件|表现为CQ码              |notice.group_upload    |
-|头衔变更|notice.group.title     |                       |
 |群戳一戳|notice.group.poke      |                       |
 |群设置变|notice.group.setting   |                       |
 |元事件|meta_event.lifecycle.enable|meta_event.lifecycle.enable|
@@ -181,3 +180,7 @@
 * [x] [事件过滤器](https://richardchien.gitee.io/coolq-http-api/docs/4.15/#/EventFilter)
 * [x] 设置允许跨域请求
 * [x] 自动更新内核版本
+
+## 考古
+
+[旧版cqhttp文档](https://richardchien.gitee.io/coolq-http-api/docs/4.15/#/Configuration)
