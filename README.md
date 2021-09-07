@@ -1,3 +1,12 @@
+## 为了更好的维护和更新，该项目作为官方http-api与oicq仓库合并，今后请前往[这里](https://github.com/takayama-lily/oicq/tree/master/http-api)查看
+## ↓↓推荐该项目的使用者迁移到更方便管理和维护的模式
+```bash
+> npm i -g oicq
+> oicq <account>
+```
+
+## 该仓库的代码以及衍生fork等仍可以正常使用不受影响
+
 # node-onebot
 
 > 基于 [oicq](https://github.com/takayama-lily/oicq) 的 [onebot(cqhttp)](https://cqhttp.cc) QQ机器人协议的实现  
