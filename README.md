@@ -1,7 +1,7 @@
 ## 为了更好的维护和更新，该项目作为官方http-api与oicq仓库合并，今后请前往[这里](https://github.com/takayama-lily/oicq/tree/master/http-api)查看
 ## ↓↓推荐该项目的使用者迁移到更方便管理和维护的模式
 ```bash
-> npm i -g oicq
+> npm i -g oicq@1
 > oicq <account>
 ```
 
